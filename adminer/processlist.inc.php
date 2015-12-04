@@ -59,3 +59,12 @@ if (isset($_GET["showfull"])) {
 ?>
 <input type="hidden" name="token" value="<?php echo $token; ?>">
 </form>
+<form action="<?php echo ME; ?>" method="get">
+<?php hidden_fields_get(); ?>
+<input type="hidden" value="" name="processlist">
+<?php if (isset($_GET["showfull"])) { ?>
+<input type="hidden" value="" name="showfull">
+<?php } ?>
+<input type="text" value="5" name="autorefresh">
+<input type="submit" type="submit" value="<?php echo lang('Auto refresh'); ?>">
+</form>
