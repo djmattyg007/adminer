@@ -313,8 +313,12 @@ function selectAddRow(field) {
 	for (var i=0; i < inputs.length; i++) {
 		mat = inputs[i].name.match(reg);
 		inputs[i].name = inputs[i].name.replace(reg, '$1' + (parseInt(mat[2]) + 1));
-		inputs[i].value = '';
 		inputs[i].className = '';
+		if (inputs[i].type == 'checkbox') {
+			inputs[i].checked = false;
+		} else {
+			inputs[i].value = '';
+		}
 	}
 	field.parentNode.parentNode.appendChild(row);
 }
