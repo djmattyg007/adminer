@@ -21,7 +21,7 @@ class AdminerTableStructure {
 			echo ($field["auto_increment"] ? " <i>" . lang('Auto Increment') . "</i>" : "");
 			echo ($field["collation"] ? " <i>" . h($field["collation"]) . "</i>" : "");
 			echo "<td>" . ($field["null"] ? lang('Yes') : lang('No'));
-			echo "<td>" . (isset($field["default"]) ? h($field["default"]) : "&nbsp;");
+			echo "<td>" . (isset($field["default"]) ? h($field["default"]) : "<i>None</i>");
 			echo (support("comment") ? "<td>" . nbsp($field["comment"]) : "");
 			echo "\n";
 		}
