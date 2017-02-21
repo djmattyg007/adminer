@@ -8,6 +8,8 @@ PostgreSQL: Export
 PostgreSQL: Don't treat partial indexes as unique
 MS SQL: Support pdo_dblib
 Elasticsearch: Support HTTPS by inputting https://server
+Add auto refresh capability to process list
+Add ability to prevent truncation of queries on process list
 
 Adminer 4.2.5 (released 2016-06-01):
 Fix remote execution in SQLite query
